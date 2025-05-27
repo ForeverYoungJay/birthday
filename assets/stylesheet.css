@@ -1317,3 +1317,60 @@ audio {
     		-webkit-transform: scale(0.9);
     	}
     }*/
+.button-heart {
+	position: relative;
+	width: 100px;
+	height: 90px;
+	background-color: #e91e63;
+	transform: rotate(-45deg); /* 外形旋转成心形 */
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	overflow: visible;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.button-heart::before,
+.button-heart::after {
+	content: "";
+	position: absolute;
+	width: 100px;
+	height: 90px;
+	background-color: #e91e63;
+	border-radius: 50%;
+	z-index: -1;
+}
+
+.button-heart::before {
+	top: -50px;
+	left: 0;
+}
+
+.button-heart::after {
+	left: 50px;
+	top: 0;
+}
+
+/* 用 span 包住文字，并单独旋转回来 */
+.button-heart span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(45deg) translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    width: 80px;
+    line-height: 1.2;
+    z-index: 1;
+    pointer-events: none;
+}
+	
+	
+	
